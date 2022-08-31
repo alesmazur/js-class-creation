@@ -1,3 +1,4 @@
+// lets make Guitar class
 class Guitar {
   constructor(brand, model) {
     this.brand = brand;
@@ -29,3 +30,26 @@ console.table(newGuitar);
 
 console.log(Guitar.prototype.constructor);
 console.log(newGuitar.hasOwnProperty("brand"));
+
+// new class Comment creation
+
+class Comment {
+  constructor(text) {
+    this.text = text;
+    this.votesQty = 0;
+  }
+  upVote() {
+    this.votesQty += 1;
+  }
+  // lets make static method of class Comment
+  static mergeOfComments(first, second) {
+    return `${first} ${second}`;
+  }
+}
+
+console.log(
+  Comment.mergeOfComments(
+    "i am first comment",
+    "i am second comment and i added to first one "
+  )
+);
